@@ -7,6 +7,8 @@ import { LoadingButton } from '@mui/lab';
 import { Grid, Stack, TextField, Container, Typography } from '@mui/material';
 // components
 import { Image } from '../../../components';
+import React, { useState } from 'react';
+
 
 // ----------------------------------------------------------------------
 
@@ -18,7 +20,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const FormSchema = Yup.object().shape({
-  fullName: Yup.string().required('Full name is required'),
+  full_name: Yup.string().required('Full name is required'),
   email: Yup.string().required('Email is required').email('That is not an email'),
   subject: Yup.string().required('Subject is required'),
   message: Yup.string().required('Message is required'),
@@ -27,6 +29,7 @@ const FormSchema = Yup.object().shape({
 // ----------------------------------------------------------------------
 
 export default function TravelContactForm() {
+  const [message, setMessage] = useState('0');
   const {
     reset,
     control,
@@ -36,18 +39,38 @@ export default function TravelContactForm() {
     mode: 'onTouched',
     resolver: yupResolver(FormSchema),
     defaultValues: {
-      fullName: '',
+      full_name: '',
       subject: '',
       email: '',
       message: '',
     },
   });
 
-  const onSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    alert(JSON.stringify(data, null, 2));
-    reset();
+  // const onSubmit = async (data) => {
+    // await new Promise((resolve) => setTimeout(resolve, 500));
+    // alert(JSON.stringify(data, null, 2));
+    // reset();
+  // };
+  const onSubmit = (data) => {
+    fetch('http://localhost:8000/api/create/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setMessage(data.message);
+      })
+      .catch((error) => {
+        setMessage('Error occurred while submitting the form.');
+      });
+      // await new Promise((resolve) => setTimeout(resolve, 500));
+      // alert(JSON.stringify(data, null, 2));
+      reset();
   };
+  
 
   return (
     <RootStyle>
@@ -85,7 +108,7 @@ export default function TravelContactForm() {
             <form onSubmit={handleSubmit(onSubmit)}>
               <Stack spacing={2.5} alignItems="flex-start">
                 <Controller
-                  name="fullName"
+                  name="full_name"
                   control={control}
                   render={({ field, fieldState: { error } }) => (
                     <TextField
@@ -156,6 +179,7 @@ export default function TravelContactForm() {
                 </LoadingButton>
               </Stack>
             </form>
+            {/* {message && <div>{message}</div>} */}
           </Grid>
         </Grid>
       </Container>

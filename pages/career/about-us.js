@@ -22,10 +22,10 @@ import { CareerAbout, CareerAboutOurVision } from '../../src/sections/@career';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  paddingTop: HEADER_MOBILE_HEIGHT,
-  [theme.breakpoints.up('md')]: {
-    paddingTop: HEADER_DESKTOP_HEIGHT,
-  },
+  // paddingTop: HEADER_MOBILE_HEIGHT,
+  // [theme.breakpoints.up('md')]: {
+  //   paddingTop: HEADER_DESKTOP_HEIGHT,
+  // },
 }));
 
 // ----------------------------------------------------------------------

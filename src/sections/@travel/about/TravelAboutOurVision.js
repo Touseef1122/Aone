@@ -3,13 +3,15 @@ import { styled } from '@mui/material/styles';
 import { Stack, Container, Typography, Grid, Card } from '@mui/material';
 // components
 import { Image } from '../../../components';
-
+import { varBounce } from '../../../components/animate';
+import { m } from 'framer-motion';
 // ----------------------------------------------------------------------
 
 const VISIONS = [
   {
     name: 'Innovative Communication',
-    description: ' Our company commitment to empowering its customers and helping them succeed in a digital world where connectivity is essential.',
+    description:
+      ' Our company commitment to empowering its customers and helping them succeed in a digital world where connectivity is essential.',
   },
   {
     name: 'Secure Connections',
@@ -29,8 +31,8 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function TravelAboutOurVision() {
   return (
-    <RootStyle >
-      <Container >
+    <RootStyle>
+      <Container>
         <Stack
           spacing={3}
           sx={{
@@ -41,7 +43,6 @@ export default function TravelAboutOurVision() {
           }}
         >
           <Typography variant="h2">Our Mission</Typography>
-
         </Stack>
 
         <Grid
@@ -51,10 +52,12 @@ export default function TravelAboutOurVision() {
           alignItems={{ md: 'center' }}
         >
           <Grid item xs={12} md={6} lg={5}>
-            <Image
-              alt="vision"
-              src="https://zone-assets-api.vercel.app/assets/illustrations/illustration_vision.svg"
-            />
+            <m.div variants={varBounce().in}>
+              <Image
+                alt="vision"
+                src="https://zone-assets-api.vercel.app/assets/illustrations/illustration_vision.svg"
+              />
+            </m.div>
           </Grid>
 
           <Grid item xs={12} md={6} lg={6}>
@@ -97,11 +100,7 @@ export default function TravelAboutOurVision() {
                       }),
                     }}
                   >
-                    <Typography
-                      variant="h3"
-                      component="h2"
-                      sx={{ color: '#4d4dff', mb: 3 }}
-                    >
+                    <Typography variant="h3" component="h2" sx={{ color: '#4d4dff', mb: 3 }}>
                       {`0${index + 1}`}
                     </Typography>
 

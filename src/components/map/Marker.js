@@ -11,7 +11,7 @@ Marker.propTypes = {
 export default function Marker({ onOpen }) {
   const handleOpen = (event) => {
     event.stopPropagation();
-    onOpen();
+    // onOpen();
   };
 
   return (

@@ -7,15 +7,17 @@ import _mock from '../../../../_data/mock';
 // components
 import { Image, CountUpNumber } from '../../../components';
 
+
+
 // ----------------------------------------------------------------------
 
 const IMAGES = [...Array(4)].map((_, index) => _mock.image.travel(index + 2));
 
 const SUMMARY = [
-  { name: 'Air tickets sold', number: 130 },
-  { name: 'Tours booked', number: 196 },
-  { name: 'Site visitors', number: 10679 },
-  { name: 'Verified hotels', number: 877 },
+  { name: ' Glaisdale Ave', number: 70 },
+  { name: 'Benton Rd', number: 96 },
+  { name: 'Briardene Ave', number: 71 },
+  { name: 'Easby Ave', number: 77 },
 ];
 
 // ----------------------------------------------------------------------
@@ -32,7 +34,7 @@ export default function TravelAbout() {
         }}
       >
         <Grid item xs={12} sx={{ textAlign: 'center' }}>
-          <Typography variant="h1" sx={{ mb: 3 }}>
+          <Typography variant="h1" sx={{ mb: 3 }} >
             Welcome to A1 Telecom!
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
@@ -43,7 +45,7 @@ export default function TravelAbout() {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} >
         {IMAGES.map((img, index) => (
           <Grid
             key={img}
@@ -57,7 +59,9 @@ export default function TravelAbout() {
               }),
             }}
           >
+
             <Image alt={img} src={img} sx={{ height: 350, borderRadius: 2 }} />
+
           </Grid>
         ))}
       </Grid>
@@ -86,11 +90,12 @@ export default function TravelAbout() {
               />
 
               <Typography
-                variant="h4"
+                variant="h6"
+                // fontSize="10px"
                 component="span"
                 sx={{ verticalAlign: 'top', ml: 0.5, color: 'primary.main' }}
               >
-                +
+                +con
               </Typography>
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>

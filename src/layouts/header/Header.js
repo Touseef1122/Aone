@@ -16,6 +16,7 @@ import { Logo, Label } from '../../components';
 import Searchbar from '../Searchbar';
 import LanguagePopover from '../LanguagePopover';
 import { NavMobile, NavDesktop, navConfig } from '../nav';
+import { useRouter } from 'next/router';
 import { ToolbarStyle, ToolbarShadowStyle } from './HeaderToolbarStyle';
 
 // ----------------------------------------------------------------------
@@ -26,6 +27,7 @@ Header.propTypes = {
 
 export default function Header({ transparent }) {
   const theme = useTheme();
+  const router = useRouter();
 
   const isDesktop = useResponsive('up', 'md');
 
@@ -37,42 +39,6 @@ export default function Header({ transparent }) {
     <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
       <ToolbarStyle disableGutters transparent={transparent} scrolling={isScrolling}>
         <Container sx={{ px: 0 }}>
-          {/* <Container
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'flex-start',
-            }}
-          >
-            <Stack spacing={4} direction="row">
-              <Box sx={{ lineHeight: 0, position: 'relative' }}>
-                <Logo onDark={transparent && !isScrolling} />
-
-                <Link
-                  href="https://royal_fleet/src/assets/images/logo.svg"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <Label
-                    color="info"
-                    sx={{
-                      ml: 0.5,
-                      px: 0.5,
-                      top: -14,
-                      left: 64,
-                      height: 20,
-                      fontSize: 11,
-                      cursor: 'pointer',
-                      position: 'absolute',
-                    }}
-                  >
-                    v1.4
-                  </Label>
-                </Link>
-              </Box>
-            </Stack>
-          </Container> */}
-
           <Container
             sx={{
               display: 'flex',
@@ -84,23 +50,6 @@ export default function Header({ transparent }) {
               <Box sx={{ lineHeight: 0, position: 'relative' }}>
                 <Logo onDark={transparent && !isScrolling} />
 
-                {/* <Link href="https://royal_fleet/src/assets/images/logo.svg" target="_blank" rel="noopener">
-              <Label
-                color="info"
-                sx={{
-                  ml: 0.5,
-                  px: 0.5,
-                  top: -14,
-                  left: 64,
-                  height: 20,
-                  fontSize: 11,
-                  cursor: 'pointer',
-                  position: 'absolute',
-                }}
-              >
-                v1.4
-              </Label>
-            </Link> */}
               </Box>
             </Stack>
             <Stack spacing={8} direction="row">
@@ -114,6 +63,7 @@ export default function Header({ transparent }) {
                   <Button
                     // color=""
                     variant="outlined"
+                    onClick={() => router.push('/travel/contact-us')}
                     sx={{
                       ...(transparent),
                       ...(isScrolling && isLight && { color: 'text.primary' }),
@@ -124,45 +74,6 @@ export default function Header({ transparent }) {
                 </>
               )}
 
-              {/* <Box sx={{ flexGrow: 1 }} /> */}
-
-              {/* <Searchbar
-              sx={{
-                ...(isScrolling && { color: 'text.primary' }),
-              }}
-            /> */}
-
-              {/* <LanguagePopover
-                sx={{
-                  ...(isScrolling && { color: 'text.primary' }),
-                }}
-              /> */}
-
-              {/* <Divider orientation="vertical" sx={{ height: 24 }} /> */}
-
-              {/* {isDesktop && ( */}
-              {/* <Stack direction="row" spacing={1} > */}
-              {/* <NextLink href={Routes.registerIllustration} prefetch={false} passHref>
-                  <Button
-                    color="inherit"
-                    variant="outlined"
-                    sx={{
-                      ...(transparent && {
-                        color: 'common.white',
-                      }),
-                      ...(isScrolling && isLight && { color: 'text.primary' }),
-                    }}
-                  >
-                    Join Us
-                  </Button>
-                </NextLink> */}
-
-              {/* <Button variant="contained" href={Routes.buyNow} target="_blank" rel="noopener">
-                  Buy Now
-                </Button> */}
-              {/* </Stack> */}
-
-              {/* )} */}
             </Stack>
 
             {!isDesktop && (

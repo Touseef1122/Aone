@@ -18,14 +18,14 @@ import { TestimonialsTravel } from '../../src/sections/testimonials';
 import { TeamTravelAbout } from '../../src/sections/team';
 import { OurClientsTravel } from '../../src/sections/our-clients';
 import { TravelAbout, TravelAboutOurVision } from '../../src/sections/@travel';
-
+import { varBounce } from '../../src/components/animate';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: HEADER_MOBILE_HEIGHT,
-  [theme.breakpoints.up('md')]: {
-    paddingTop: HEADER_DESKTOP_HEIGHT,
-  },
+  // [theme.breakpoints.up('md')]: {
+  //   paddingTop: HEADER_DESKTOP_HEIGHT,
+  // },
 }));
 
 // ----------------------------------------------------------------------
@@ -38,7 +38,7 @@ export default function TravelAboutUsPage({ posts }) {
   return (
     <Page title="About Us - Travel">
       <RootStyle>
-        <TravelAbout />
+        <TravelAbout variants={varBounce().in}/>
 
         <TravelAboutOurVision />
 

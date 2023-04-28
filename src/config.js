@@ -39,6 +39,6 @@ export const defaultSettings = {
 // LAYOUT
 // ----------------------------------------------------------------------
 
-export const HEADER_MOBILE_HEIGHT = 80;
+export const HEADER_MOBILE_HEIGHT = 40;
 export const HEADER_DESKTOP_HEIGHT = 100;
 export const DRAWER_WIDTH = 280;
