@@ -12,24 +12,13 @@ import Layout from '../../src/layouts';
 // components
 import { Page } from '../../src/components';
 // sections
-import { NewsletterTravel } from '../../src/sections/newsletter';
-import { BlogTravelLatestPosts } from '../../src/sections/blog';
 import { TestimonialsTravel } from '../../src/sections/testimonials';
-import { TeamTravelAbout } from '../../src/sections/team';
-import { OurClientsTravel } from '../../src/sections/our-clients';
 import { TravelAbout, TravelAboutOurVision } from '../../src/sections/@travel';
-import { varBounce } from '../../src/components/animate';
 // ----------------------------------------------------------------------
-
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: HEADER_MOBILE_HEIGHT,
-  // [theme.breakpoints.up('md')]: {
-  //   paddingTop: HEADER_DESKTOP_HEIGHT,
-  // },
 }));
-
 // ----------------------------------------------------------------------
-
 TravelAboutUsPage.propTypes = {
   posts: PropTypes.array.isRequired,
 };
@@ -38,25 +27,18 @@ export default function TravelAboutUsPage({ posts }) {
   return (
     <Page title="About Us - Travel">
       <RootStyle>
-        <TravelAbout variants={varBounce().in}/>
-
+        <TravelAbout />
         <TravelAboutOurVision />
-
         <TestimonialsTravel testimonials={_testimonials} />
-
       </RootStyle>
     </Page>
   );
 }
-
 // ----------------------------------------------------------------------
-
 TravelAboutUsPage.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
-
 // ----------------------------------------------------------------------
-
 export async function getStaticProps() {
   return {
     props: {

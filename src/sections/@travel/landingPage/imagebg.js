@@ -21,7 +21,7 @@ export default function Imagebg() {
           alt="hero"
           src={agency.src}
           sx={{
-            height: '50vh',
+            height: {xs:'20vh', sm:'45vh'},
             bgcolor: 'transparent',
           }}
         />

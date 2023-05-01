@@ -10,5 +10,5 @@ export * from './service';
 export * from './forchauffeurs';
 export * from './carRental';
 export * from './hailing';
-export * from './landingPage';
+export * from './landingPage/index.js';
 export * from './userProfile';

@@ -21,7 +21,8 @@ import {
   BusinessCorporations,
   BusinessOverview,
   TravelLandingCars,
-  Text
+  BusinessStrategies,
+  BusinessTestimonials,
 } from '../../../src/sections/@travel';
 import Main from '../../../src/sections/@travel/landingPage/main';
 import Imagebg from '../../../src/sections/@travel/landingPage/imagebg';
@@ -35,10 +36,9 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 // ----------------------------------------------------------------------
-
-// A1stricker.propTypes = {
-//   posts: PropTypes.array.isRequired,
-// };
+A1stricker.propTypes = {
+  posts: PropTypes.array.isRequired,
+};
 
 export default function A1stricker({ posts }) {
   const { data: tours = [], error } = useRequest('/api/travel/tours');
@@ -50,12 +50,9 @@ export default function A1stricker({ posts }) {
   return (
     <Page title="Bentley Mulsanne EWB">
       <Box sx={{ position: 'relative' }}>
-      <Text tour={title}/>
         <BusinessOverview image={image2} />
         <BusinessCorporations images={corp2} />
-        <Main comp={services2} />
-        <TravelLandingCars />
-        <Imagebg />
+        {/* <Imagebg /> */}
       </Box>
     </Page>
   );

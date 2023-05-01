@@ -32,6 +32,14 @@ import igs21 from '../../src/assets/images/bentley17.png';
 import igs22 from '../../src/assets/images/bentley18.jpg';
 import igs23 from '../../src/assets/images/bentley19.jpg';
 import igs24 from '../../src/assets/images/bentley20.jpg';
+import RAU from '../../src/assets/images/RAU.jpg';
+import IOS from '../../src/assets/images/IOS.jpg';
+import IOSF from '../../src/assets/images/IOSF.jpg';
+import sou from '../../src/assets/images/sou.jpg';
+import A1 from '../../src/assets/images/a1bg.jpg';
+import FTFB from '../../src/assets/images/FTFB.jpg';
+import PBSF from '../../src/assets/images/PBSF.jpeg';
+import ASF from '../../src/assets/images/ASF.jpg';
 
 export const title=[
   {title:"Your global chauffeur service"}
@@ -88,7 +96,66 @@ export const corp2 = [
     direction: 'left',
     para: 'true',
   },
+  {
+    title: 'Splicing Underground and Overhead',
+    image: sou,
+    link: 'Learn More',
+    path:"/travel/Premium/cityToCity"
+  },
+  
+  {
+    title: 'Fiber testing full build',
+    image: A1,
+    link: 'Learn More',
+    path:"/travel/chauffeur-hailing/hailing"
+  },
+  {
+    title: 'Reserve your luxury Bentley Mulsanne EWB chauffeur car now',
+    image1: igs5,
+    image2: igs6,
+    direction: 'left',
+    //   para:'true'
+  },
+  {
+    title: 'Test Rod and Rope to prove the Network PIA',
+    image: RAU,
+    link: 'Learn More',
+    path:"/travel/Premium/airportTransfer"
+  },
+  {
+    title: 'Pre-build Sureys FTTP',
+    image: PBSF,
+    link: 'Learn More',
+    path:"/travel/chauffeur-hailing/hailing"
+  },
+  {
+    title: 'Installation Of Fiber optic cables Underground and Overhead',
+    image: IOSF,
+    link: 'Learn More',
+    path:"/travel/Premium/airportTransfer"
+  },
+  {
+    title: 'Asbuilt Sureys FTTP',
+    image: ASF,
+    link: 'Learn More',
+    path:"/travel/Premium/cityToCity"
+  },
+  {
+    title: 'Installation Of Subducting',
+    image: IOS,
+    link: 'Learn More',
+    path:"/travel/Premium/airportTransfer"
+  },
 ];
+
+// export const image3 = [
+//   {
+//     bg: Speed,
+//     para: 'true',
+//     imageTitle1: 'Premium Class The Enigmatic Premium Chauffeur',
+//     imageTitle2: 'Bentley Mulsanne Speed',
+//   },
+// ];
 export const services2 = [
   {
     title: 'Reserve your luxury Bentley Mulsanne EWB chauffeur car now',
@@ -108,16 +175,39 @@ export const image3 = [
   },
 ];
 export const corp3 = [
-  {
-    title: 'The Exclusive Bentley Mulsanne Luxury Chauffeur Vehicle',
-    description: `The Bentley Mulsanne is a car 80 years in the making, giving effortless performance combined with hand-crafted luxury. This the latest model has been facelifted offering a fresh modern look, with a long list of high specification passenger refinements with this the speed version including, full multimedia pack, bespoke audio and theatre seating. All lavishly appointed inside with chrome detailing, burr walnut wood veneers and reassuringly expensive soft leather.    `,
-    title2: 'Choose The Bentley Mulsanne Speed For Understated Elegance    ',
-    description3:
-      'Whether you are a high flying exec, treating a client or loved one, the Bentley Mulsanne never compromises, like you.      ',
-    image: igs7,
-    direction: 'left',
-    para: 'true',
-  },
+  // {
+  //   title: 'The Exclusive Bentley Mulsanne Luxury Chauffeur Vehicle',
+  //   description: `The Bentley Mulsanne is a car 80 years in the making, giving effortless performance combined with hand-crafted luxury. This the latest model has been facelifted offering a fresh modern look, with a long list of high specification passenger refinements with this the speed version including, full multimedia pack, bespoke audio and theatre seating. All lavishly appointed inside with chrome detailing, burr walnut wood veneers and reassuringly expensive soft leather.    `,
+  //   title2: 'Choose The Bentley Mulsanne Speed For Understated Elegance    ',
+  //   description3:
+  //     'Whether you are a high flying exec, treating a client or loved one, the Bentley Mulsanne never compromises, like you.      ',
+  //   image: RAU,
+  //   // image: IOS,
+  //   // image: IOSF,
+  //   // image: sou,
+  //   // image: A1,
+  //   // image: IOSF,
+  //   // image: IOS,
+  //   direction: 'left',
+  //   para: 'true',
+  // },
+  // {
+  //   title: 'The Exclusive Bentley Mulsanne Luxury Chauffeur Vehicle',
+  //   description: `The Bentley Mulsanne is a car 80 years in the making, giving effortless performance combined with hand-crafted luxury. This the latest model has been facelifted offering a fresh modern look, with a long list of high specification passenger refinements with this the speed version including, full multimedia pack, bespoke audio and theatre seating. All lavishly appointed inside with chrome detailing, burr walnut wood veneers and reassuringly expensive soft leather.    `,
+  //   title2: 'Choose The Bentley Mulsanne Speed For Understated Elegance    ',
+  //   description3:
+  //     'Whether you are a high flying exec, treating a client or loved one, the Bentley Mulsanne never compromises, like you.      ',
+  //   // image: RAU,
+  //   // image: IOS,
+  //   // image: IOSF,
+  //   // image: sou,
+  //   // image: A1,
+  //   // image: IOSF,
+  //   image: IOS,
+  //   direction: 'left',
+  //   para: 'true',
+  // },
+  
 ];
 export const services3 = [
   {

@@ -12,7 +12,7 @@ import { responsiveFontSizes } from 'src/utils/getFontValue';
 const RootStyle = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(5, 0),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(10, 0),
+    padding: theme.spacing(4, 0),
   },
 }));
 
@@ -55,7 +55,7 @@ export default function OurClientsCareer({ tours }) {
             mb: { xs: 2, md: 2 },
           }}
         >
-          <Typography sx={{ color: 'black', fontSize: { xs: '14px', md: '24px' } }}>
+          <Typography variant='h3' sx={{ color: 'black', }}>
             We are working with
           </Typography>
         </Stack>

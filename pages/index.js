@@ -15,6 +15,7 @@ import B3 from '../src/assets/images/b3.jpg';
 import B4 from '../src/assets/images/b4.png';
 import B5 from '../src/assets/images/b5.png';
 import Imagebg from '../src/sections/@travel/landingPage/imagebg';
+import Contactusbg from '../src/sections/@travel/landingPage/Contactusbg';
 // components
 import { Page, ErrorScreen } from '../src/components';
 // sections
@@ -49,11 +50,12 @@ export default function TravelLandingPage({ posts }) {
     <Page title="Home">
       <Loader />
       <Box sx={{ position: 'relative' }}>
-        <TravelLandingHero tours={tours.slice(0, 5)} />
+        <TravelLandingHero />
       </Box>
       <TravelLandingIntroduce tours={brandsColor} />
       <Imagebg />
       <TravelLandingIntroduceOurServices />
+      <Contactusbg/>
     </Page>
   );
 }

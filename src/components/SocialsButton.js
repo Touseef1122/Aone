@@ -28,30 +28,14 @@ export default function SocialsButton({
 }) {
   const SOCIALS = [
     {
-      name: 'FaceBook',
-      icon: logoFacebook,
-      socialColor: '#1877F2',
-      path: links.facebook || '#facebook-link',
-    },
-    {
-      name: 'Instagram',
-      icon: logoInstagram,
-      socialColor: '#E02D69',
-      path: links.instagram || '#instagram-link',
-    },
-    {
       name: 'Linkedin',
       icon: logoLinkedin,
       socialColor: '#007EBB',
-      path: links.linkedin || '#linkedin-link',
+      path: 'https://www.linkedin.com/groups/12775685',
     },
-    {
-      name: 'Twitter',
-      icon: logoTwitter,
-      socialColor: '#00AAEC',
-      path: links.twitter || '#twitter-link',
-    },
+    // ...
   ];
+  
 
   return (
     <Stack direction="row" flexWrap="wrap" alignItems="center">

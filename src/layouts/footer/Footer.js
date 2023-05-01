@@ -73,16 +73,15 @@ export default function Footer() {
               <Stack
                 direction={{ xs: 'row', md: 'row' }}
                 justifyContent="center"
-                sx={{ textAlign: 'center', padding:'20px' }}
+                sx={{ textAlign: 'center', padding: '20px' }}
               >
                 <Typography color="black" variant="h4">
                   A1 TELECOM
                 </Typography>
               </Stack>
 
-             
               <Divider color="Black" />
-              
+
               <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 spacing={2}
@@ -118,19 +117,12 @@ export default function Footer() {
                 </Stack>
 
                 <Stack direction="row" spacing={3} alignSelf={{ xs: 'center', md: 'flex-end' }}>
-                  <Link variant="body3" sx={{ color: 'black' }}>
-                    <Iconify icon={Youtube} sx={{ fontSize: '22px', color: '#000000' }} />
-                  </Link>
-                  <Link variant="body3" sx={{ color: 'text.secondary' }}>
-                    <Iconify icon={Facebook} sx={{ fontSize: '22px', color: '#000000' }} />
-                  </Link>
-                  <Link variant="body3" sx={{ color: 'text.secondary' }}>
-                    <Iconify icon={Twitter} sx={{ fontSize: '22px', color: '#000000' }} />
-                  </Link>
-                  <Link variant="body3" sx={{ color: 'text.secondary' }}>
-                    <Iconify icon={Insta} sx={{ fontSize: '22px', color: '#000000' }} />
-                  </Link>
-                  <Link variant="body3" sx={{ color: 'text.secondary' }}>
+                  <Link
+                    href="https://www.linkedin.com/groups/12775685"
+                    target="_blank"
+                    variant="body3"
+                    sx={{ color: 'text.secondary' }}
+                  >
                     <Iconify icon={Linkedin} sx={{ fontSize: '22px', color: '#000000' }} />
                   </Link>
                 </Stack>
@@ -189,11 +181,7 @@ function ListMobile({ list }) {
 
   return (
     <Stack spacing={1.5} alignItems="flex-start">
-      <Typography
-        variant="h6"
-        color="black"
-        marginTop="20px"
-      >
+      <Typography variant="h6" color="black" marginTop="20px">
         {subheader}
       </Typography>
       <Box

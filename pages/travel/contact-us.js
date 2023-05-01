@@ -11,9 +11,6 @@ import Layout from '../../src/layouts';
 // components
 import { Page } from '../../src/components';
 // sections
-import { NewsletterCareer } from '../../src/sections/newsletter';
-// import { CareerContactInfo, CareerContactForm } from '../../src/sections/@career';
-// import { ContactMap } from '../../src/sections/@travel';
 import { TravelContactInfo, TravelContactForm } from '../../src/sections/@travel';
 
 //
@@ -21,12 +18,7 @@ const ContactMap = dynamic(() => import('../../src/components/map/ContactMap'));
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({
-  // paddingTop: HEADER_MOBILE_HEIGHT,
-  // [theme.breakpoints.up('md')]: {
-  //   paddingTop: HEADER_DESKTOP_HEIGHT,
-  // },
-}));
+const RootStyle = styled('div')(({ theme }) => ({}));
 
 // ----------------------------------------------------------------------
 
@@ -37,14 +29,11 @@ export default function CareerContactUsPage() {
         <TravelContactInfo />
         <ContactMap offices={_offices} />
         <TravelContactForm />
-        {/* <NewsletterCareer /> */}
       </RootStyle>
     </Page>
   );
 }
-
-// ----------------------------------------------------------------------
-
+// ---------------------------------------------------------------------
 CareerContactUsPage.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
