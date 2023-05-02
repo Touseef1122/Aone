@@ -18,16 +18,17 @@ const ContactMap = dynamic(() => import('../../src/components/map/ContactMap'));
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled('div')(({ theme }) => ({}));
-
+const RootStyle = styled('div')(({ theme }) => ({
+  paddingTop: "80px",
+}));
 // ----------------------------------------------------------------------
 
 export default function CareerContactUsPage() {
   return (
     <Page title="Contact Us - Career">
       <RootStyle>
+      <ContactMap offices={_offices} />
         <TravelContactInfo />
-        <ContactMap offices={_offices} />
         <TravelContactForm />
       </RootStyle>
     </Page>

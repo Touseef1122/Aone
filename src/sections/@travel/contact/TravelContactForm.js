@@ -8,8 +8,7 @@ import { Grid, Stack, TextField, Container, Typography } from '@mui/material';
 // components
 import { Image } from '../../../components';
 import React, { useState } from 'react';
-
-
+import CuF from '../../../assets/images/cubg.jpg';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -40,17 +39,13 @@ export default function TravelContactForm() {
     resolver: yupResolver(FormSchema),
     defaultValues: {
       full_name: '',
+      phonenumber: '',
       subject: '',
       email: '',
       message: '',
     },
   });
 
-  // const onSubmit = async (data) => {
-    // await new Promise((resolve) => setTimeout(resolve, 500));
-    // alert(JSON.stringify(data, null, 2));
-    // reset();
-  // };
   const onSubmit = (data) => {
     fetch('http://localhost:8000/api/create/', {
       method: 'POST',
@@ -66,28 +61,32 @@ export default function TravelContactForm() {
       .catch((error) => {
         setMessage('Error occurred while submitting the form.');
       });
-      // await new Promise((resolve) => setTimeout(resolve, 500));
-      // alert(JSON.stringify(data, null, 2));
-      reset();
+    // await new Promise((resolve) => setTimeout(resolve, 500));
+    // alert(JSON.stringify(data, null, 2));
+    reset();
   };
-  
 
   return (
     <RootStyle>
       <Container>
         <Grid container spacing={3} justifyContent="space-between">
           <Grid
+          justifyContent="center"
             item
             xs={12}
             md={6}
             lg={5}
             sx={{
-              display: { xs: 'none', md: 'block' },
+              display: {
+                xs: 'none',
+                md: 'block',
+        
+              },
             }}
           >
             <Image
-              alt="travel-contact"
-              src="https://zone-assets-api.vercel.app/assets/illustrations/illustration_travel_contact.svg"
+              // alt="travel-contact"
+              src={CuF.src}
             />
           </Grid>
 
@@ -129,6 +128,26 @@ export default function TravelContactForm() {
                       {...field}
                       fullWidth
                       label="Email"
+                      error={Boolean(error)}
+                      helperText={error?.message}
+                    />
+                  )}
+                />
+                <Controller
+                  name="phonenumber"
+                  control={control}
+                  rules={{
+                    pattern: {
+                      value: /^(?:\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/,
+                      message: 'Please enter a valid UK phone number',
+                    },
+                  }}
+                  render={({ field, fieldState: { error } }) => (
+                    <TextField
+                      {...field}
+                      fullWidth
+                      label="Phone Number"
+                      placeholder="e.g. +44 123 456 7890"
                       error={Boolean(error)}
                       helperText={error?.message}
                     />
@@ -179,7 +198,6 @@ export default function TravelContactForm() {
                 </LoadingButton>
               </Stack>
             </form>
-            {/* {message && <div>{message}</div>} */}
           </Grid>
         </Grid>
       </Container>

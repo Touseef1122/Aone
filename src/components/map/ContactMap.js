@@ -36,7 +36,7 @@ export default function ContactMap({ offices, sx, ...other }) {
   };
 
   return (
-    <Box sx={{ height: 480, overflow: 'hidden', ...sx }} {...other}>
+    <Box sx={{ height: 500, overflow: 'hidden', ...sx }} {...other}>
   <GoogleMapReact
     bootstrapURLKeys={{ key: GOOGLE_API }}
     defaultCenter={centerMap}
