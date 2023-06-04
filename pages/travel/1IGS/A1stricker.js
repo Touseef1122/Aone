@@ -52,7 +52,6 @@ export default function A1stricker({ posts }) {
       <Box sx={{ position: 'relative' }}>
         <BusinessOverview image={image2} />
         <BusinessCorporations images={corp2} />
-        {/* <Imagebg /> */}
       </Box>
     </Page>
   );

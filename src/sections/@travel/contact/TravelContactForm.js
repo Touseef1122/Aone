@@ -61,8 +61,7 @@ export default function TravelContactForm() {
       .catch((error) => {
         setMessage('Error occurred while submitting the form.');
       });
-    // await new Promise((resolve) => setTimeout(resolve, 500));
-    // alert(JSON.stringify(data, null, 2));
+
     reset();
   };
 
@@ -71,7 +70,7 @@ export default function TravelContactForm() {
       <Container>
         <Grid container spacing={3} justifyContent="space-between">
           <Grid
-          justifyContent="center"
+            justifyContent="center"
             item
             xs={12}
             md={6}
@@ -80,13 +79,19 @@ export default function TravelContactForm() {
               display: {
                 xs: 'none',
                 md: 'block',
-        
               },
             }}
           >
             <Image
-              // alt="travel-contact"
               src={CuF.src}
+              sx={{
+                transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                '&:hover': {
+                  // opacity: 0.8,
+                  transform: 'scale(1.6)',
+                  cursor: 'pointer',
+                },
+              }}
             />
           </Grid>
 

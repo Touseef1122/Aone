@@ -138,10 +138,16 @@ export default function TravelLandingIntroduceOurServices() {
                     mx: 'auto',
                     borderRadius: '10px',
                     objectFit: 'cover',
+                    transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                    '&:hover': {
+                      opacity: 0.8,
+                      transform: 'scale(0.9)',
+                      cursor: 'pointer',
+                    },
                   }}
                 />
                 <Stack >
-                  <TextMaxLine variant="h6" asLink persistent>
+                  <TextMaxLine variant="h6">
                     {' '}
                     {value.title}
                   </TextMaxLine>
@@ -171,10 +177,16 @@ export default function TravelLandingIntroduceOurServices() {
                     mx: 'auto',
                     borderRadius: '10px',
                     objectFit: 'cover',
+                    transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                    '&:hover': {
+                      opacity: 0.8,
+                      transform: 'scale(0.9)',
+                      cursor: 'pointer',
+                    },
                   }}
                 />
                 <Stack >
-                  <TextMaxLine variant="h6" asLink persistent>
+                  <TextMaxLine variant="h6">
                     {' '}
                     {value.title}
                   </TextMaxLine>
@@ -204,10 +216,16 @@ export default function TravelLandingIntroduceOurServices() {
                     mx: 'auto',
                     borderRadius: '10px',
                     objectFit: 'cover',
+                    transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+                    '&:hover': {
+                      opacity: 0.8,
+                      transform: 'scale(0.9)',
+                      cursor: 'pointer',
+                    },
                   }}
                 />
                 <Stack >
-                  <TextMaxLine variant="h6" asLink persistent>
+                  <TextMaxLine variant="h6" >
                     {' '}
                     {value.title}
                   </TextMaxLine>

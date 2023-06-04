@@ -1,17 +1,13 @@
 import * as React from 'react';
-
 import { Typography, Box, Button } from '@mui/material';
 import agency from '../../../assets/images/cu.jpg';
-// import Stack from 'mui/material';
-// utils
-// components
 import { Image } from '../../../components';
 import { useRouter } from 'next/router';
 
 // ----------------------------------------------------------------------
 
 export default function Imagebg() {
-    const router = useRouter();
+  const router = useRouter();
 
   return (
     <Box
@@ -27,6 +23,7 @@ export default function Imagebg() {
         sx={{
           position: 'relative',
           textAlign: 'center',
+          overflow: 'hidden'
         }}
       >
         <Image
@@ -35,9 +32,14 @@ export default function Imagebg() {
           sx={{
             height: { xs: '20vh', sm: '45vh' },
             bgcolor: 'transparent',
-            // borderRadius: '10px',
             filter: 'brightness(30%)',
             opacity: 0.8,
+            transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
+        '&:hover': {
+          opacity: 0.8,
+          transform: 'scale(1.2)',
+          cursor: 'pointer',
+        },
           }}
         />
 
