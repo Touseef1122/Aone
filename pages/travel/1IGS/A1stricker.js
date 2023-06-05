@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-import { corp2, services2, image2,title } from '../../../_data/mock/landing';
+import { corp2, services2, image2, title } from '../../../_data/mock/landing';
 
 // @mui
 import { Box } from '@mui/material';
@@ -17,15 +17,11 @@ import Layout from '../../../src/layouts';
 import { Page, ErrorScreen } from '../../../src/components';
 // sections
 import { styled } from '@mui/material/styles';
-import {
-  BusinessCorporations,
-  BusinessOverview,
-  TravelLandingCars,
-  BusinessStrategies,
-  BusinessTestimonials,
-} from '../../../src/sections/@travel';
+import { BusinessCorporations, BusinessOverview } from '../../../src/sections/@travel';
 import Main from '../../../src/sections/@travel/landingPage/main';
 import Imagebg from '../../../src/sections/@travel/landingPage/imagebg';
+import { varRotate } from '../../../src/components/animate';
+import { m } from 'framer-motion';
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(10, 0),
@@ -48,10 +44,14 @@ export default function A1stricker({ posts }) {
   }
   const [show, setShow] = useState(false);
   return (
-    <Page title="Bentley Mulsanne EWB">
+    <Page title="Our Services">
       <Box sx={{ position: 'relative' }}>
-        <BusinessOverview image={image2} />
-        <BusinessCorporations images={corp2} />
+        <m.div variants={varRotate().in}>
+          <BusinessOverview image={image2} />
+        </m.div >
+        {/* <m.div variants={varSlide().inUp} > */}
+          <BusinessCorporations images={corp2} />
+        {/* </m.div> */}
       </Box>
     </Page>
   );
@@ -62,7 +62,7 @@ export default function A1stricker({ posts }) {
 // ----------------------------------------------------------------------
 
 A1stricker.getLayout = function getLayout(page) {
-  return <Layout >{page}</Layout>;
+  return <Layout>{page}</Layout>;
 };
 
 // ----------------------------------------------------------------------

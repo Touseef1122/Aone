@@ -7,7 +7,11 @@ import _mock from '../../../../_data/mock';
 // components
 import { Image, CountUpNumber } from '../../../components';
 
-
+import H1 from '../../../assets/images/H1.jpg';
+import H2 from '../../../assets/images/H2.jpg';
+import H3 from '../../../assets/images/H3.jpg';
+import H4 from '../../../assets/images/H4.jpg';
+const imagePaths = [{ img: H1 }, { img: H2 }, { img: H3 }, { img: H4 }];
 
 // ----------------------------------------------------------------------
 
@@ -34,7 +38,7 @@ export default function TravelAbout() {
         }}
       >
         <Grid item xs={12} sx={{ textAlign: 'center' }}>
-          <Typography variant="h1" sx={{ mb: 3 }} >
+          <Typography variant="h1" sx={{ mb: 3 }}>
             Welcome to A1 Telecom!
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
@@ -45,10 +49,10 @@ export default function TravelAbout() {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} >
-        {IMAGES.map((img, index) => (
+      <Grid container spacing={3}>
+        {imagePaths?.map((path, index) => (
           <Grid
-            key={img}
+            key={path}
             item
             xs={12}
             sm={6}
@@ -59,12 +63,11 @@ export default function TravelAbout() {
               }),
             }}
           >
-
-            <Image alt={img} src={img} sx={{ height: 350, borderRadius: 2 }} />
-
+            <Image  src={path.img?.src} sx={{ height: 350, borderRadius: 2 }} />
           </Grid>
         ))}
       </Grid>
+
 
       <Box
         sx={{
@@ -131,7 +134,7 @@ export default function TravelAbout() {
 
         <Grid item xs={12} md={6} lg={6}>
           <Typography variant="h4" paragraph>
-          Our services includes
+            Our services includes
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>
             Our services include voice, data, and video communication services, as well as managed

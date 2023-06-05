@@ -10,10 +10,7 @@ import FTFB from '../../../../src/assets/images/FTFB.jpg';
 import PBSF from '../../../../src/assets/images/PBSF.jpeg';
 import ASF from '../../../../src/assets/images/ASF.jpg';
 import { Typography, List, Box, ListItem, Container, Grid } from '@mui/material';
-// utils
-// components
 import { Image, TextMaxLine } from '../../../components';
-import { LoadingButton } from '@mui/lab';
 
 // ----------------------------------------------------------------------
 
@@ -55,7 +52,7 @@ export default function BusinessCorporations({ images }) {
                 width: '100%',
                 height: '400px',
                 borderRadius: '20px',
-                border: 'solid 2px black',
+                  
                 overflow: 'hidden',
               }}
               layout="fill"
@@ -96,7 +93,7 @@ export default function BusinessCorporations({ images }) {
                 width: '100%',
                 height: '400px',
                 borderRadius: '20px',
-                border: 'solid 2px black',
+                  
                 overflow: 'hidden',
               }}
               layout="fill"
@@ -112,7 +109,7 @@ export default function BusinessCorporations({ images }) {
                   width: '100%',
                   height: '400px',
                   borderRadius: '20px',
-                  border: 'solid 2px black',
+                    
                   overflow: 'hidden',
                 }}
                 layout="fill"
@@ -152,7 +149,7 @@ export default function BusinessCorporations({ images }) {
                 width: '100%',
                 height: '400px',
                 borderRadius: '20px',
-                border: 'solid 2px black',
+                  
                 overflow: 'hidden',
               }}
               layout="fill"
@@ -167,7 +164,7 @@ export default function BusinessCorporations({ images }) {
                 width: '100%',
                 height: '400px',
                 borderRadius: '20px',
-                border: 'solid 2px black',
+                  
                 overflow: 'hidden',
               }}
               layout="fill"
@@ -209,7 +206,7 @@ export default function BusinessCorporations({ images }) {
                 width: '100%',
                 height: '400px',
                 borderRadius: '20px',
-                border: 'solid 2px black',
+                  
                 overflow: 'hidden',
               }}
               layout="fill"
@@ -224,7 +221,7 @@ export default function BusinessCorporations({ images }) {
                 width: '100%',
                 height: '400px',
                 borderRadius: '20px',
-                border: 'solid 2px black',
+                  
                 overflow: 'hidden',
               }}
               layout="fill"
